@@ -1,0 +1,92 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    .row {
+        height: 100%;
+    }
+
+    .col-2,
+    .col-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        height: 100%;
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    ul li {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        /* Sắp xếp hình ảnh và chữ theo chiều dọc */
+        align-items: center;
+        /* Căn giữa ảnh và chữ theo chiều dọc */
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+
+    .link img {
+        margin-bottom: 8px;
+        width: 20px;
+    }
+
+    .btn-auth {
+        border-color: rgb(243, 169, 31);
+        margin: 7px;
+        height: 35px;
+        width: 130px;
+        font-size: 15px;
+    }
+</style>
+
+<div class="container-fluid" style="background-image: url('/Week_1/resource/image/icon/header.jpg'); height: 100px;">
+    <div class="row align-items-center align-items-stretch">
+        <div class="col-2">
+            <img class="logo" src="/Week_1/resource/image/icon/logo.png" alt="logo">
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center">
+            <input type="text" placeholder="  Hôm nay bạn muốn tìm gì..."
+                style="width:210px; height:35px; font-size:10px; border-color: rgb(243, 169, 31); border-top-left-radius: 12px; border-bottom-left-radius: 12px;">
+            <i class="bi bi-search d-flex justify-content-center align-items-center"
+                style="background-color:rgb(243, 169, 31); width:40px; height: 35px; border-top-right-radius: 12px; border-bottom-right-radius: 12px;"></i>
+        </div>
+        <div class="col-4 d-flex justify-content-center align-items-center">
+            <ul>
+                <li>
+                    <a href="" class="link" style="color:rgb(243, 169, 31);"><img
+                            src="/Week_1/resource/image/icon/icon/stick-1-a.png" alt="">Trang chủ</a>
+                </li>
+                <li><a href="" class="link"><img src="/Week_1/resource/image/icon/icon/stick-2.png" alt="">Giới
+                        thiệu</a> </li>
+                <li><a href="" class="link"><img src="/Week_1/resource/image/icon/icon/stick-3.png" alt="">Ưu đãi</a>
+                </li>
+                <li><a href="" class="link"><img src="/Week_1/resource/image/icon/icon/stick-4.png" alt="">Tin tức</a>
+                </li>
+                <li><a href="" class="link"><img src="/Week_1/resource/image/icon/icon/stick-5.png" alt="">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center">
+            <button class="btn-auth" style="background-color: rgb(243, 169, 31); color:white; border:none">Đăng
+                nhập</button>
+            <button class="btn-auth" style="background: transparent; color: rgb(243, 169, 31)">Đăng ký</button>
+        </div>
+    </div>
+</div>

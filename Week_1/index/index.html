@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        .container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Chèn nội dung từ header.html vào #header-placeholder
+        fetch('/Week_1/layout/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+    <div class="container-fluid">
+        <div class="row" style="width:100%; height: 50%" style="background-color: aqua;">
+            <img src="/Week_1/resource/image/icon/banner.jpg" alt="" style="width:100%; height:200px ">
+        </div>
+    </div>
+</body>
+
+</html>
