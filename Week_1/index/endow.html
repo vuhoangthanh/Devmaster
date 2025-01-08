@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        .container {
+            width: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .col-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .icon-list {
+            margin-right: 20px;
+        }
+
+
+
+        /* top */
+        .section {
+            margin-top: 30px;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-left: 150px;
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+        }
+
+        .card {
+            width: 380px;
+            height: 350px;
+            background-color: black;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 380px;
+            height: 185px;
+            /* object-fit: cover; */
+        }
+
+        .card-body {
+            padding: 0px;
+            text-align: left;
+            height: 130px;
+        }
+
+        .card-body h3 {
+            font-size: 16px;
+            font-weight: bold;
+            /* margin: 10px 0; */
+            color: #333;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #777;
+            margin: 5px 0 15px;
+        }
+
+        .card-body .date {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .card-body .btn {
+            display: inline-block;
+            background-color: white;
+            color: #ff6600;
+            border-radius: 25px;
+            border-color: #ff6600;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .card-body .btn:hover {
+            background-color: #ff3300;
+        }
+
+        /* Nút Prev và Next */
+        .btn-prev,
+        .btn-next {
+            background: transparent;
+            color: #827c7c;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: -30px; */
+
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: transparent;
+            /* Màu cho các mũi tên điều hướng */
+            color: #ff6600
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Chèn nội dung từ header.html vào #header-placeholder
+        fetch('/Week_1/layout/headerUser.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+    <hr style=" height: 5px; border:none; background-color: rgb(243, 169, 31); margin-top: 0px;margin-bottom: 0px;">
+    <!-- Carousel Banner -->
+    <div class="row">
+        <img src="/Week_1/resource/image/icon/banner.jpg" alt="Banner 1">
+    </div>
+    <div style="padding:20px 0 0 172px;">
+        <p>Trang chủ > ưu đãi</p>
+    </div>
+    <b style="font-size:35px; margin-left:172px; margin-bottom: 15px;">Ưu đãi</b>
+    <!-- list function -->
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <!-- Sản phẩm 1 -->
+            <div class="col-md-4 " style="padding-left:55px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-1.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 2 -->
+            <div class="col-md-4">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-2.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-2.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 3 -->
+            <div class="col-md-4" style="margin-left:-40px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-3.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-3.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center" style="margin-top:20px">
+            <!-- Sản phẩm 4 -->
+            <div class="col-md-4 " style="padding-left:55px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-4.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-4.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 5 -->
+            <div class="col-md-4">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-5.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-5.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 6 -->
+            <div class="col-md-4" style="margin-left:-40px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-6.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-6.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center" style="margin-top:20px">
+            <!-- Sản phẩm 7 -->
+            <div class="col-md-4 " style="padding-left:55px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-1.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 8 -->
+            <div class="col-md-4">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-2.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-2.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 9 -->
+            <div class="col-md-4" style="margin-left:-40px;">
+                <div class="card" style="position:relative">
+                    <img class="logo_card"
+                        style="position:absolute; width:100px; height:100px; top:135px; left:35%; background-color:pink; border-radius: 50%; box-shadow: 0 0px 3px black"
+                        src="/Week_1/resource/image/icon/brand-3.jpg" alt="">
+                    <img src="/Week_1/resource/image/icon/brand-3.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body" style="margin-top:60px;">
+                        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                31/01/19</p>
+                            <a href="#" class="btn">Xem Chi Tiết ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder" style="margin-top:100px;"></div>
+    <script>
+        // Chèn nội dung từ header.html vào #header-placeholder
+        fetch('/Week_1/layout/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+
+<!-- Thêm liên kết tới JavaScript Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
