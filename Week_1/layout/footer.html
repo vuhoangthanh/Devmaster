@@ -2,13 +2,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-    p,
-    b {
+    .p_info,
+    .b_info {
         color: white;
+    }
+
+    .input_footer::placeholder {
+        color: white;
+        font-size: 15px;
+
     }
 </style>
 <div class="container-fluid">
-    <div class="row d-flex justify-content-center align-items-center " style="height:70px;">
+    <div class="row d-flex justify-content-center align-items-center "
+        style="height:110px;     box-shadow: 0 -4px 10px  rgba(0, 0, 0, 0.2)">
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-1.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-2.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-3.png" alt=""></div>
@@ -16,27 +23,28 @@
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-5.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-6.png" alt=""></div>
     </div>
-    <div class="row" style="background-color:rgb(70, 81, 81)">
-        <div class="col-3 d-flex flex-column justify-content-center align-items-start">
+    <div class="row" style="background-color:rgb(51, 48, 51)">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-start" style="padding-left:20px;">
             <hr style="width: 70px; height: 2px; border:none; background-color: #ff6600;  margin-top:50px;">
-            <b style="font-size:30px">Liên hệ</b>
-            <p><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt="">58 Tố Hữu, Thanh Xuân, Hà Nội</p>
-            <p><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt="">(024).3783.5639</p>
-            <p><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt="">info@adcvietnam.net</p>
-            <p><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt="">www.adcvietname.net</p>
+            <b class="b_info" style="font-size:30px">Liên hệ</b>
+            <p class="p_info"><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt=""> 58 Tố Hữu, Thanh Xuân, Hà
+                Nội</p>
+            <p class="p_info"><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt=""> (024).3783.5639</p>
+            <p class="p_info"><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt=""> info@adcvietnam.net</p>
+            <p class="p_info"><img src="/Week_1/resource/image/icon/icon/web-ct.png" alt=""> www.adcvietname.net</p>
         </div>
-        <div class="col-3 d-flex flex-column justify-content-center align-items-start">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-start" style="padding-left:20px;">
             <hr style="width: 70px; height: 2px; border:none; background-color: #ff6600;  margin-top:50px;">
-            <b style="font-size:30px">Về LESKIN</b>
-            <p>Về chúng tôi</p>
-            <p>Sứ mệnh</p>
-            <p>Tăng trưởng</p>
-            <p>Quan hệ cổ đông</p>
+            <b class="b_info" style="font-size:30px">Về LESKIN</b>
+            <p class="p_info">Về chúng tôi</p>
+            <p class="p_info">Sứ mệnh</p>
+            <p class="p_info">Tăng trưởng</p>
+            <p class="p_info">Quan hệ cổ đông</p>
 
         </div>
-        <div class="col-3 d-flex flex-column justify-content-center align-items-start">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-start" style="padding-left:20px;">
             <hr style="width: 70px; height: 2px; border:none; background-color: #ff6600; ">
-            <b style="font-size:30px; ">TẢI APP NGAY</b>
+            <b class="b_info" style="font-size:30px; ">TẢI APP NGAY</b>
             <div class="d-flex flex-column justify-content-center align-items-start">
                 <img style="margin-top:15px; border-radius: 10px;;" src="/Week_1/resource/image/icon/app-android.jpg"
                     alt="">
@@ -44,11 +52,26 @@
                     alt="">
             </div>
         </div>
-        <div class="col-3 d-flex flex-column justify-content-center align-items-start">
+        <div class="col-3 d-flex flex-column justify-content-center align-items-start" style="padding-left:20px;">
             <hr style="width: 70px; height: 2px; border:none; background-color: #ff6600;  ">
-            <b style="font-size:30px">NEWLETTER</b>
-            <input type="text" placeholder="Nhập email">
-            <img src="" alt="">
+            <b class="b_info" style="font-size:30px">NEWLETTER</b>
+            <p class="p_info">Đăng ký để nhận ưu đãi hàng tháng</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <input type="text" placeholder=" Nhập email" class="input_footer"
+                    style="width:225px; height:30px; border-radius:5px 0 0 5px; border:none; background-color:#726864;  ">
+                <div class="d-flex justify-content-center align-items-center only-left-border"
+                    style="background-color:#726864; width:34px;height:30px; border-radius: 0 5px 5px 0; border-left: black solid 1px">
+                    <img src="/Week_1/resource/image/icon/icon/send.png" alt="" style=" width:15px;height:12px; ">
+                </div>
+            </div>
+            <div style="margin-top:20px">
+                <img src="/Week_1/resource/image/icon/icon/facebook.png" alt="">
+                <img style="margin-left:20px" src="/Week_1/resource/image/icon/icon/youtube.png" alt="">
+                <img style="margin-left:20px" src="/Week_1/resource/image/icon/icon/instagram.png" alt="">
+            </div>
         </div>
+    </div>
+    <div class="row " style=" background-color:black; padding-top: 25px; padding-bottom: 10px;">
+        <p style="color:white"><img src="" alt="">2019 Leskin. All rights reserved.</p>
     </div>
 </div>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list li {
+            /* display: flex; */
+            background-color: white;
+            width: 390px;
+            height: 60px;
+            margin-top: -36px;
+            color: black;
+            border: none;
+            border-bottom: rgb(55, 54, 54) dashed 1px;
+            font-size: 15px;
+
+        }
+
+        .list li img {
+            padding: 5px 5px 5px 5px;
+            margin-right: 10px;
+        }
+
+
+        .btn_change {
+            width: 400px;
+            height: 35px;
+            border: none;
+            margin-left: -15px;
+            border: rgb(165, 160, 160) solid 1px;
+            border-radius: 3px;
+        }
+
+        .inf p {
+            width: 150px;
+
+        }
+
+        .newPassword div {
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <hr style=" height: 5px; border:none; background-color: rgb(243, 169, 31); margin-top: 0px; margin-bottom: 0px;">
+
+    <script>
+        // Chèn nội dung từ header.html vào #header-placeholder
+        fetch('/Week_1/layout/headerUser.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+    <div class="container-fluid" style="background-color: rgb(247, 247, 244); ">
+        <div class="row" style="padding:20px 0 20px 100px; ">
+            <p>Trang chủ > Tài khoản</p>
+        </div>
+        <div class="row" style="height:740px">
+            <div class="col-4">
+                <div class="info">
+                    <ul class="list"
+                        style="box-shadow: 0 0 1px black; border-radius: 5px; margin-left:100px; margin-top:-160px">
+                        <li
+                            style="background-color:orange; margin-top:0px; color:white; padding-left:15px; border:none; border-radius: 5px 5px 0px 0px;font:bold;font-size:20px;">
+                            Thông tin
+                            tài khoản</li>
+                        <li><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Thông tin cá nhân</li>
+                        <li style="color:orange"><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Thông tin
+                            bảo mật</li>
+                        <li><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Thông tin ví</li>
+                        <li><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Lịch sử giao dịch</li>
+                        <li><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Điều khoản sử dụng</li>
+                        <li><img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Hướng dẫn sử dụng</li>
+                        <li style="border-radius: 0px 0px 5px 5px; border:none;"><img
+                                src="/Week_1/resource/image/icon/avt-demo2.png" alt=""> Đăng xuất</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8">
+                <div
+                    style=" border-radius: 4px; background-color:white; height:99%; width:90%; border:none; box-shadow: 0 0 1px black; margin-top:-30px">
+                    <div class="newPassword " style="position: relative">
+                        <div>
+                            <p style=" font-size: 20px;  padding-top:15px;"><b>Thông tin cá
+                                    nhân</b>
+                            </p>
+                            <p style="margin-top:10px; margin-left:570px;"><i class="bi bi-pencil"></i> Chỉnh sửa</p>
+                        </div>
+
+                        <hr style="width:95%; margin:auto; ">
+                        <div class="inf">
+                            <p><b>Họ và tên</b></p><input class="btn_change" type="text">
+                        </div>
+                        <div class="inf">
+                            <p><b>Số CMND/CCCD</b></p><input class="btn_change" type="text">
+                        </div>
+                        <div class="inf">
+                            <p><b>Ngày sinh</b></p>
+                            <input type="number" style="width:127px; margin-left:-15px;">
+                            <input type="number" style="width:127px; margin-left:10px;">
+                            <input type="number" style="width:127px; margin-left:10px;">
+                        </div>
+                        <div class="inf">
+                            <p><b>Giới tính</b></p>
+                            <input type="radio">Nam
+                            <input type="radio" style="margin-left:20px;"> Nữ
+                        </div>
+                        <div class="inf">
+                            <p><b>Số điện thoại</b></p><input class="btn_change" type="text">
+                        </div>
+                        <div class="inf">
+                            <p><b>Email</b></p><input class="btn_change" type="text">
+                        </div>
+                        <div class="inf">
+                            <p><b>Địa chỉ</b></p><input class="btn_change" type="text">
+                        </div>
+                        <div
+                            style="width:280px; height:500px; position: absolute; flex-direction: column; align-items:center; top:70px; right:20px; border:none; border-left:gray solid 1px;">
+                            <img src="/Week_1/resource/image/icon/avt-demo2.png" alt=""
+                                style="width:190px; height:190px">
+                            <button
+                                style="margin-top:70px; width:120px; height:40px; border:rgb(199, 190, 190) solid 1px;border-radius: 5px; background-color:white">Chọn
+                                ảnh</button>
+                            <p style="margin-top:20px;">Dung lượng file tối đa là 1MB</p>
+                            <p style="margin-top:-10px;">Định dạng file là: JEG, PNG</p>
+                        </div>
+                        <button
+                            style="width:140px; height:33px; border:none; border-radius: 5px; background-color:orange; color:white; font-size: 15px; font:bold; margin-top:25px; margin-left: 160px;">
+                            LƯU</button>
+                        <p style="margin-left: 160px; margin-top:25px; font-size:14px;"><img
+                                src="/Week_1/resource/image/icon/icon/stick-3.png" alt="">
+                            Thông tin cá nhân của quý
+                            khách được đảm bảo an toàn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: rgb(247, 247, 244);height:60px;"> </div>
+        </div>
+
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Chèn nội dung từ header.html vào #header-placeholder
+        fetch('/Week_1/layout/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+
+</html>
