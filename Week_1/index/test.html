@@ -1,0 +1,92 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<div class="pagination-container">
+    <div data-page="1">
+        <p>Content for Div Number 1</p>
+    </div>
+    <div data-page="2" style="display:none;">
+        <p>Content for Div Number 2</p>
+    </div>
+    <div data-page="3" style="display:none;">
+        <p>Content for Div Number 3</p>
+    </div>
+    <div data-page="4" style="display:none;">
+        <p>Content for Div Number 4</p>
+    </div>
+    <div data-page="5" style="display:none;">
+        <p>Content for Div Number 5</p>
+    </div>
+
+    <div class="text-center">
+        <div class="pagination pagination-centered">
+            <ul class="pagination ">
+                <li data-page="-"><a href="#">&lt;</a></li>
+                <li data-page="1"><a href="#">1</a></li>
+                <li data-page="2"><a href="#">2</a></li>
+                <li data-page="3"><a href="#">3</a></li>
+                <li data-page="4"><a href="#">4</a></li>
+                <li data-page="5"><a href="#">5</a></li>
+                <li data-page="+"><a href="#">&gt;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    var paginationHandler = function () {
+        // Store pagination container so we only select it once
+        var $paginationContainer = $(".pagination-container"),
+            $pagination = $paginationContainer.find('.pagination ul');
+
+        // Click event
+        $pagination.find("li a").on('click.pageChange', function (e) {
+            e.preventDefault();
+
+            // Get parent li's data-page attribute and current page
+            var parentLiPage = $(this).parent('li').data("page"),
+                currentPage = parseInt($(".pagination-container div[data-page]:visible").data('page')),
+                numPages = $paginationContainer.find("div[data-page]").length;
+
+            // Remove background color from all pagination links
+            $pagination.find("li a").css("background-color", "");
+
+            // Add background color to the clicked link
+            $(this).css("background-color", "orange");
+
+            // Make sure they aren't clicking the current page
+            if (parseInt(parentLiPage) !== parseInt(currentPage)) {
+                // Hide the current page
+                $paginationContainer.find("div[data-page]:visible").hide();
+
+                if (parentLiPage === '+') {
+                    // Next page
+                    $paginationContainer.find("div[data-page=" + (currentPage + 1 > numPages ? numPages : currentPage + 1) + "]").show();
+                } else if (parentLiPage === '-') {
+                    // Previous page
+                    $paginationContainer.find("div[data-page=" + (currentPage - 1 < 1 ? 1 : currentPage - 1) + "]").show();
+                } else {
+                    // Specific page
+                    $paginationContainer.find("div[data-page=" + parseInt(parentLiPage) + "]").show();
+                }
+            }
+        });
+    };
+
+    $(document).ready(paginationHandler);
+
+</script>
+
+<div class=" d-flex align-items: flex-start;" style="width:700px; height:500px; border:black solid 1px; ">
+    <div>
+        <img src="/Week_1/resource/image/icon/news-2.jpg" class="card-img-top" alt="Product 1" style="width:300px;">
+    </div>
+    <div class="card-body" style="margin-top:60px;">
+        <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                31/01/19</p>
+            <a href="#" class="btn">Xem Chi Tiết ></a>
+        </div>
+    </div>
+</div>
