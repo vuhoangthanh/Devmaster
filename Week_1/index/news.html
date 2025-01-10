@@ -6,126 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <style>
-        .container {
-            width: 100%;
-        }
+    <link rel="stylesheet" href="/Week_1/resource/css/news.css">
 
-
-
-
-        .col-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .icon-list {
-            margin-right: 20px;
-        }
-
-
-
-
-        .card-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            /* flex-wrap: wrap; */
-        }
-
-        .news {
-            /* width: 380px;
-            height: 350px; */
-            background-color: black;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background-color: white;
-            width: 90%;
-            height: 120%;
-            display: inline-block;
-            border-radius: 5px;
-
-        }
-
-        .news:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-
-        .card-body {
-            padding: 30px 30px 0 30px;
-        }
-
-        .news img {
-            width: 47%;
-            height: 110%;
-        }
-
-        .card-body h3 {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .card-body p {
-            font-size: 14px;
-            color: #777;
-            margin: 5px 0 15px;
-        }
-
-        .card-body .date {
-            font-size: 13px;
-            color: #999;
-        }
-
-        .card-body .btn {
-            display: inline-block;
-            background-color: white;
-            color: #ff6600;
-            border-radius: 25px;
-            border-color: #ff6600;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            height: 13%;
-            width: 40%;
-            margin-top: 15px;
-        }
-
-        .card-body .btn:hover {
-            background-color: #ff3300;
-        }
-
-        .li_page {
-            border: rgb(139, 125, 125) solid 1px;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            margin-left: -37px;
-        }
-
-        .li_page a {
-            text-decoration: none;
-            color: black;
-            width: 30px;
-            height: 29px;
-
-        }
-
-        .title {
-            font-size: 17px;
-        }
-
-        .content {
-            font-size: 15px;
-        }
-    </style>
 
 </head>
 
@@ -334,21 +216,14 @@
                         </div>
                     </div>
                 </div>
-                <div data-page="3" style="display:none;">
-                    <p>Have no product 3</p>
-                </div>
-                <div data-page="4" style="display:none;">
-                    <p>Have no product 4</p>
-                </div>
 
-                <div class="text-center" style="margin-top:70px;">
+                <div class="atext-center" style="margin-top:70px;">
                     <div class="pagination pagination-centered d-flex justify-content-center" style="margin-top:20px;">
                         <ul class="pagination ">
                             <li class="li_page" data-page=" -"><a href="#">&lt;</a></li>
-                            <li class="li_page" data-page="1"><a href="#" style="color:white">1</a></li>
+                            <li class="li_page" data-page="1"><a href="#" style="color:white;">1</a></li>
                             <li class="li_page" data-page="2"><a href="#">2</a></li>
-                            <li class="li_page" data-page="3"><a href="#">3</a></li>
-                            <li class="li_page" data-page="4"><a href="#">4</a></li>
+
                             <li class="li_page" data-page="+"><a href="#">&gt;</a></li>
                         </ul>
                     </div>
