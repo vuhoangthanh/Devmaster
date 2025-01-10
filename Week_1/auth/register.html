@@ -6,30 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* .inp_account::placeholder {
-            padding-left: 35px;
-        } */
+        .inf_register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+        }
 
-        .inp_account {
+        .inf_register input {
+            width: 80%;
+            height: 40px;
+            border-radius: 30px;
+            border: 1px solid orange;
             text-indent: 40px;
         }
 
-        .inp_pair {
+        .inf_register a {
+            width: 80%;
+            height: 40px;
+            background-color: orange;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inf_register a:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        .nav-tabs .nav-link b {
+            color: black;
+            font-size: 15px;
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: transparent;
+            border: none;
+        }
+
+        .nav-tabs .nav-link {
+            background-color: transparent;
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active b {
+            color: orange;
+        }
+
+        .nav-tabs .nav-link.active span {
+            display: block;
+        }
+
+        .nav-link {
             position: relative;
         }
 
-        .inp_pair #user {
+        .triangle-down {
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid orange;
             position: absolute;
-            top: 12px;
-            left: -90px;
+            top: 32px;
+            right: 60px;
+            display: none;
         }
 
-        .inp_pair #lock {
+        .triangle-down1 {
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid orange;
             position: absolute;
-            top: 65px;
-            left: -90px;
+            top: 32px;
+            right: 100px;
+            display: none;
+        }
+
+        .inf_register {
+            position: relative;
+        }
+
+        #user {
+            position: absolute;
+            top: 27px;
+            left: 58px;
+        }
+
+        #email {
+            position: absolute;
+            top: 79px;
+            left: 58px;
+        }
+
+        #phone {
+            position: absolute;
+            top: 130px;
+            left: 58px;
+        }
+
+        #map {
+            position: absolute;
+            top: 179px;
+            left: 58px;
+        }
+
+        #phone1 {
+            position: absolute;
+            top: 27px;
+            left: 58px;
         }
     </style>
 </head>
@@ -39,25 +138,29 @@
         <div class="row d-flex  align-items-center">
             <div class="col-4">
                 <div
-                    style="display: flex; flex-direction: column;  align-items: center; border: none; width: 450px; height: 400px; background-image: url('/Week_1/resource/image/icon/header.jpg'); border-radius: 5px;">
-                    <div style=" padding:35px 0 40px 0;">
+                    style="display:flex; flex-direction: column;  align-items: center; border: none; width: 450px; height: 530px; background-image: url('/Week_1/resource/image/icon/header.jpg'); border-radius: 5px;">
+                    <div style="padding:35px 0 40px 0;">
                         <img src="/Week_1/resource/image/icon/logo.png" alt="">
                     </div>
-                    <div style="width:100%; background-color:aqua">
+                    <div style="width:100%;">
                         <!-- Tabs Header -->
                         <div class="row_header">
                             <ul class="nav nav-tabs" id="myTab" role="tablist"
-                                style="margin-left:-40px; gap:10px; height:41px; border:none; display:flex;justify-content: center; align-items: center;  list-style-type: none; ">
+                                style=" gap:10px; height:41px; border:none; display:flex; justify-content: center; align-items: center;  list-style-type: none; ">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="voucher-tab" data-bs-toggle="tab"
-                                        data-bs-target="#voucher" type="button" role="tab" style="color:black;">
-                                        <b style="font-size:18px;">DÀNH CHO SPA</b>
+                                        data-bs-target="#voucher" type="button" role="tab">
+                                        <b style="font-size:15px;">DÀNH CHO SPA</b>
+                                        <span class="triangle-down"></span>
                                     </button>
+
+
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="coupon-tab" data-bs-toggle="tab"
                                         data-bs-target="#coupon" type="button" role="tab" style="color:black; ">
-                                        <b style="font-size:18px;">DÀNH CHO KHÁCH HÀNG</b>
+                                        <b style="font-size:15px;">DÀNH CHO KHÁCH HÀNG</b>
+                                        <span class="triangle-down1"></span>
                                     </button>
                                 </li>
                             </ul>
@@ -67,13 +170,26 @@
                         <div class="row_content ">
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="voucher" role="tabpanel">
-                                    <p style="margin-left:20px;">dsfs</p>
+                                    <div class="inf_register">
+                                        <input type="text" placeholder="Full Name" style="margin-top:20px;">
+                                        <input type="text" placeholder="Email">
+                                        <input type="text" placeholder="Phone">
+                                        <input type="text" placeholder="Address">
+                                        <a class="btn" href="" style="margin-top:5px;"><b>ĐĂNG KÝ</b></a>
+                                        <i id="user" class="bi bi-person-fill" style="color:orange; "></i>
+                                        <i id="email" class="bi bi-envelope-fill" style="color:orange; "></i>
+                                        <i id="map" class="bi bi-geo-alt-fill" style="color:orange; "></i>
+                                        <i id="phone" class="bi bi-telephone-fill" style="color:orange"></i>
+                                    </div>
                                 </div>
 
                                 <div class="tab-pane fade" id="coupon" role="tabpanel">
-                                    <div class="tab-pane fade show active" id="voucher" role="tabpanel"
-                                        style="  width:840px; ">
-                                        <p style="margin-left:20px;">ĐÁNH GIÁ</p>
+                                    <div class="tab-pane fade show active" id="voucher" role="tabpanel">
+                                        <div class="inf_register">
+                                            <input type="text" placeholder="Phone" style="margin-top:20px;">
+                                            <a class="btn" href=""><b>ĐĂNG KÝ</b></a>
+                                            <i id="phone1" class="bi bi-telephone-fill" style="color:orange"></i>
+                                        </div>
                                     </div>
                                 </div>
 

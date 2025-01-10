@@ -7,12 +7,8 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* .inp_account::placeholder {
-            padding-left: 35px;
-        } */
-
         .inp_account {
-            text-indent: 40px;
+            text-indent: 33px;
         }
 
         .inp_pair {
@@ -21,44 +17,44 @@
 
         .inp_pair #user {
             position: absolute;
-            top: 12px;
-            left: -90px;
+            top: 11px;
+            left: -80px;
         }
 
         .inp_pair #lock {
             position: absolute;
-            top: 65px;
-            left: -90px;
+            top: 64px;
+            left: -80px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div
-                    style="display: flex; flex-direction: column;  align-items: center; border: none; width: 450px; height: 400px; background-image: url('/Week_1/resource/image/icon/header.jpg'); border-radius: 5px;">
-                    <div style=" padding:35px 0 40px 0;">
-                        <img src="/Week_1/resource/image/icon/logo.png" alt="">
-                    </div>
-                    <!-- <div style="background-image: url('/Week_1/resource/image/icon/header.jpg');"> -->
-                    <div class="inp_pair"
-                        style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                        <input class="inp_account"
-                            style="border:1px solid orange; border-radius:30px; width:220%; height:40px;" type="text"
-                            placeholder="Tên đăng nhập">
-                        <input class="inp_account"
-                            style="border:1px solid orange; border-radius:30px; width:220%; height:40px;" type="text"
-                            placeholder="Mật khẩu">
-                        <i id="user" class="bi bi-person-fill" style="color:orange; "></i>
-                        <i id="lock" class="bi bi-lock-fill" style="color:orange; "></i>
-                    </div>
-                    <a class="btn" href=""
-                        style="width:82%; height:40px;border-radius:30px; background-color:orange; margin-top:10px;display:flex; justify-content:center; align-items: center; text-decoration: none; color:white;"><b>Đăng
-                            nhập</b></a>
-                    <p>Quên mật khẩu ? <a href="#" style="color:orange; text-decoration: none;"> Đăng ký</a></p>
+    <div class="row">
+        <div class="col-auto">
+            <button id="exit"
+                style=" margin-left:430px; border-radius: 50%; color:white; border:1px solid rgb(238, 230, 230);background-color:transparent;">X</button>
+            <div
+                style="display: flex; flex-direction: column;  align-items: center; border: none; width: 430px; height: 400px; background-image: url('/Week_1/resource/image/icon/header.jpg'); border-radius: 5px;">
+                <div style=" padding:35px 0 40px 0;">
+                    <img src="/Week_1/resource/image/icon/logo.png" alt="">
                 </div>
+                <!-- <div style="background-image: url('/Week_1/resource/image/icon/header.jpg');"> -->
+                <div class="inp_pair" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <input class="inp_account"
+                        style="border:1px solid orange; border-radius:30px; width:200%; height:45px;" type="text"
+                        placeholder="Tên đăng nhập">
+                    <input class="inp_account"
+                        style="border:1px solid orange; border-radius:30px; width:200%; height:45px;" type="text"
+                        placeholder="Mật khẩu">
+                    <i id="user" class="bi bi-person-fill" style="color:orange; "></i>
+                    <i id="lock" class="bi bi-lock-fill" style="color:orange; "></i>
+                </div>
+                <a class="btn" href=""
+                    style="width:82%; height:40px;border-radius:30px; background-color:orange; margin-top:10px;display:flex; justify-content:center; align-items: center; text-decoration: none; color:white;"><b>Đăng
+                        nhập</b></a>
+                <p style="margin-top:5px;">Quên mật khẩu ? <a href="#" style="color:orange; text-decoration: none;">
+                        Đăng ký</a></p>
             </div>
         </div>
     </div>
