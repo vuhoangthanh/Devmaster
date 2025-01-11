@@ -12,8 +12,6 @@
             height: 100%;
             width: 100%;
             margin-left: 24%;
-            /* margin-top: 10%; */
-            /* margin-bottom: 10%; */
 
         }
 
@@ -31,16 +29,14 @@
         }
 
         .sidebar ul {
-            border: 1px solid black;
+            border: 1px solid rgb(190, 186, 186);
             border-radius: 5px;
-            box-shadow: 0 0 3px black;
             width: 350px;
         }
 
-        .content {
-            /* padding: 20px; */
+        /* .content {
             margin-left: -20%;
-        }
+        } */
 
         .content-section {
             display: none;
@@ -48,7 +44,7 @@
     </style>
 </head>
 
-<body style="background-color:rgb(246, 242, 242); margin-bottom: 40px;">
+<body style="background-color:rgb(250, 242, 242); margin-bottom: 40px;">
     <div id="header-placeholder"></div>
     <hr style=" height: 5px; border:none; background-color: rgb(243, 169, 31); margin-top: 0px;margin-bottom: 0px;">
 
@@ -63,10 +59,10 @@
     </script>
 
     <div class="container-fluid" style="margin-top:50px;">
-        <div class="row">
+        <div class="row d-flex align-items-start">
             <!-- Sidebar -->
-            <div class="col-4">
-                <nav class="sidebar p-3 ">
+            <div class="col-4 p-3">
+                <nav class="sidebar">
                     <ul class="nav flex-column">
                         <li class="nav-item"
                             style="background-color:orange; color:white; border:none; border-top-left-radius: 5px; border-top-right-radius: 5px;">
@@ -104,8 +100,9 @@
                 </nav>
             </div>
             <!-- Main Content -->
-            <div class="col-8">
+            <div class="col-8 ">
                 <div id="person" class="content-section">
+
                 </div>
                 <script>
                     fetch('/Week_1/account/account.html')
@@ -116,7 +113,7 @@
                         .catch(error => console.error('Error loading header:', error));
                 </script>
 
-                <div id="auth" class="content-section">
+                <div id="auth" class="content-section pt-3">
                 </div>
                 <script>
                     fetch('/Week_1/account/account2.html')
@@ -127,7 +124,7 @@
                         .catch(error => console.error('Error loading header:', error));
                 </script>
 
-                <div id="wallet" class="content-section">
+                <div id="wallet" class="content-section p-3">
                 </div>
                 <script>
                     fetch('/Week_1/account/account3.html')
@@ -168,7 +165,7 @@
 
         // Mặc định hiển thị dashboard khi tải trang
         document.addEventListener('DOMContentLoaded', function () {
-            showContent('dashboard');
+            showContent('person');
         });
     </script>
 
