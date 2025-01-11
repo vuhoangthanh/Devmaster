@@ -13,14 +13,37 @@
     <div id="header-placeholder"></div>
 
     <script>
-        // Chèn nội dung từ header.html vào #header-placeholder
         fetch('/Week_1/layout/headerUser.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
+
+                const popup = document.getElementById('popup');
+                const account = document.getElementById('account');
+
+                account.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const popupDisplay = window.getComputedStyle(popup).display;
+                    if (popupDisplay === 'none') {
+                        popup.style.display = 'block';
+                    } else {
+                        popup.style.display = 'none';
+                    }
+                });
+
             })
-            .catch(error => console.error('Error loading header:', error));
+            .catch(error => console.error('Error loading headerUser:', error));
     </script>
+
+    <div id="popup" style="width:150px; background-color: white; box-shadow: 0 0 5px rgb(167, 163, 163);">
+        <span id="triangle"></span>
+        <a class="btn" href="">
+            Tài khoản của tôi
+        </a>
+        <a class="btn" href="">
+            <p style="margin-left:1px;">Đăng xuất</p>
+        </a>
+    </div>
 
     <hr style=" height: 5px; border:none; background-color: rgb(243, 169, 31); margin-top: 0px;margin-bottom: 0px;">
     <div style="padding:20px 0 0 125px;">

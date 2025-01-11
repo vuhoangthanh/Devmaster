@@ -1,41 +1,44 @@
 var paginationHandler = function () {
-    // store pagination container so we only select it once
     var $paginationContainer = $(".pagination-container"),
         $pagination = $paginationContainer.find('.pagination ul');
 
+    // Đặt màu ban đầu cho trang 1
     $pagination.find("li[data-page='1'] a").css("background-color", "orange");
-    $pagination.find("li[data-page='1'] ").css("color", "white");
-    // click event
+    $pagination.find("li[data-page='1']").css("color", "white");
+
+    // Xử lý sự kiện click
     $pagination.find("li a").on('click.pageChange', function (e) {
         e.preventDefault();
-        // get parent li's data-page attribute and current page
+
         var parentLiPage = $(this).parent('li').data("page"),
             currentPage = parseInt($(".pagination-container div[data-page]:visible").data('page')),
-            numPages = $paginationContainer.find("div[data-page]").length;
+            numPages = $paginationContainer.find("div[data-page]").length,
+            nextPage = currentPage;
 
+        // Xác định trang tiếp theo hoặc trước đó
+        if (parentLiPage === '+') {
+            nextPage = Math.min(currentPage + 1, numPages); // Trang tiếp theo
+        } else if (parentLiPage === '-') {
+            nextPage = Math.max(currentPage - 1, 1); // Trang trước nhưng không nhỏ hơn 1
+        } else {
+            nextPage = parseInt(parentLiPage); // Trang cụ thể
+        }
 
-
-        // delete, add background-color
-        $pagination.find("li a").css("background-color", "");
-        $pagination.find("li a").css("color", "black");
-        $(this).css("background-color", "orange");
-        $(this).css("color", "white");
-
-        // make sure they aren't clicking the current page
-        if (parseInt(parentLiPage) !== parseInt(currentPage)) {
-            // hide the current page
+        // Kiểm tra nếu trang hợp lệ
+        if (nextPage >= 1 && nextPage <= numPages) {
+            // Ẩn trang hiện tại và hiển thị trang tiếp theo
             $paginationContainer.find("div[data-page]:visible").hide();
-            if (parentLiPage === '+') {
-                // next page
-                $paginationContainer.find("div[data-page=" + (currentPage + 1 > numPages ? numPages : currentPage + 1) + "]").show();
-            } else if (parentLiPage === '-') {
-                // previous page
-                $paginationContainer.find("div[data-page=" + (currentPage - 1 < 1 ? 1 : currentPage - 1) + "]").show();
-            } else {
-                // specific page
-                $paginationContainer.find("div[data-page=" + parseInt(parentLiPage) + "]").show();
-            }
+            $paginationContainer.find("div[data-page=" + nextPage + "]").show();
+
+            // Đặt lại màu cho tất cả các trang
+            $pagination.find("li a").css("background-color", "");
+            $pagination.find("li a").css("color", "black");
+
+            // Thay đổi màu cho trang tiếp theo
+            $pagination.find("li[data-page='" + nextPage + "'] a").css("background-color", "orange");
+            $pagination.find("li[data-page='" + nextPage + "'] a").css("color", "white");
         }
     });
 };
+
 $(document).ready(paginationHandler);
