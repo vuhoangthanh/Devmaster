@@ -175,3 +175,494 @@
         popup.style.display = 'none';
     });
 </script>
+
+<!-- side bar -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            background-color: #f8f9fa;
+            height: 100vh;
+            width: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            margin-left: 24%;
+        }
+
+        .sidebar ul li {
+            background-color: #f8f9fa;
+            border: none;
+            border-bottom: 1px solid rgb(209, 198, 198);
+            display: flex;
+            align-items: center;
+            height: 45px;
+            /* width: 350px; */
+        }
+
+        .sidebar ul li a {
+            color: black;
+
+        }
+
+        .sidebar ul {
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 3px black;
+            width: 350px;
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: -30%;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list li {
+            /* display: flex; */
+            background-color: white;
+            width: 390px;
+            height: 70px;
+            color: black;
+            border: none;
+            border-bottom: rgb(55, 54, 54) dashed 1px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .list li img {
+            padding: 5px 5px 5px 5px;
+            margin-right: 10px;
+        }
+
+
+        .btn_change {
+            width: 400px;
+            height: 35px;
+            border: none;
+            margin-left: -15px;
+            border: rgb(165, 160, 160) solid 1px;
+            border-radius: 3px;
+        }
+
+        .inf p {
+            width: 150px;
+
+        }
+
+        .newPassword div {
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .date {
+            width: 127px;
+            margin-left: 10px;
+            text-indent: 5px;
+        }
+
+        .btn_change {
+            width: 400px;
+            height: 35px;
+            border: none;
+            margin-left: -15px;
+            border: rgb(165, 160, 160) solid 1px;
+            border-radius: 3px;
+        }
+
+        .inf p {
+            width: 150px;
+
+        }
+
+        .newPassword div {
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .table thead tr th {
+            background-color: #f0e7e7;
+            border: none;
+            border-top: rgb(163, 158, 158) solid 1px;
+            border-bottom: rgb(163, 158, 158) solid 1px;
+        }
+
+        tbody td {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-4">
+                <nav class="col-3 col-lg-2 sidebar p-3 ">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"
+                            style="background-color:orange; color:white; border:none; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                            <b style="margin-left:15px; ">Thông tin tài khoản</b>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="javascript:void(0);" onclick="showContent('person')">Thông
+                                tin cá nhân</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('auth')">Thông tin bảo
+                                mật</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('wallet')">Thông tin
+                                ví</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('history')">Lịch sử giao
+                                dịch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('rule')">Điều khoản sử
+                                dụng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('tutorial')">Hướng dẫn
+                                sử
+                                dụng</a>
+                        </li>
+                        <li class="nav-item" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                            <a class="nav-link" href="javascript:void(0);" onclick="showContent('logout')">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div class="col-8">
+                <!-- <main class="col-md-9 ms-sm-auto col-lg-10 content col-8"> -->
+                <div id="person" class="content-section">
+
+                </div>
+                <script>
+                    // Chèn nội dung từ header.html vào #header-placeholder
+                    fetch('/Week_1/account/account.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('person').innerHTML = data;
+                        })
+                        .catch(error => console.error('Error loading header:', error));
+                </script>
+                <div id="auth" class="content-section">
+                    <div
+                        style=" border-radius: 4px; background-color:white; height:96%; width:90%; border:none; box-shadow: 0 0 1px black; margin-top:-10px">
+                        <div class="newPassword">
+                            <p style="font:bold; font-size: 20px; margin:10px 0 0 20px; padding-top:15px;">Đổi mật khẩu
+                                của
+                                bạn
+                            </p>
+                            <hr style="width:95%; margin:auto; margin-top:10px;">
+                            <div class="inf">
+                                <p>Mật khẩu hiện tại</p><input class="btn_change" type="text">
+                            </div>
+                            <div class="inf">
+                                <p>Mật khẩu mới</p><input class="btn_change" type="text">
+                            </div>
+                            <div class="inf">
+                                <p>Xác nhận mật khẩu</p><input class="btn_change" type="text">
+                            </div>
+                            <button
+                                style="width:140px; height:33px; border:none; border-radius: 3px; background-color:orange; color:white; font-size: 15px; font:bold; margin-top:25px; margin-left: 220px;">CẬP
+                                NHẬT</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="wallet" class="content-section">
+                    <div class="col-8">
+                        <div class="container">
+                            <!-- Tabs Header -->
+                            <div class="row">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist" style="height:41px; border:none;">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="voucher-tab" data-bs-toggle="tab"
+                                            data-bs-target="#voucher" type="button" role="tab" style="color:black;">
+                                            <img style=" margin-top:-5px; margin-right:5px; border-bottom-color: orange solid 3px ;"
+                                                src="/Week_1/resource/image/icon/icon/stick-3.png" alt="">Voucher
+                                            <span style="color:orange; ">02</span>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="coupon-tab" data-bs-toggle="tab"
+                                            data-bs-target="#coupon" type="button" role="tab" style="color:black; ">
+                                            <img style="margin-top:-5px; margin-right:5px;"
+                                                src="/Week_1/resource/image/icon/icon/stick-3.png" alt="">
+                                            Coupon
+                                            <span style="color:orange">02</span></button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="points-tab" data-bs-toggle="tab"
+                                            data-bs-target="#points" type="button" role="tab" style="color:black;">
+                                            <img style="margin-top:-5px; margin-right:5px;"
+                                                src="/Week_1/resource/image/icon/icon/stick-3.png" alt="">
+                                            Điểm
+                                            <span style="color:orange">2456</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <!-- Tabs Content -->
+                            <div class="row" style="margin-left:-24.1px;">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="voucher" role="tabpanel"
+                                        style="width:840px;">
+                                        <!-- 1 -->
+                                        <div class="card mb-3" style="border-radius: 0px;">
+                                            <div class="row g-0 d-flex align-items-center justify-content-center">
+                                                <div class="col-2 d-flex align-items-center justify-content-center"
+                                                    style="width:60px; height:60px; border:orange solid 2px; border-radius:100px; margin-left:-35px;">
+                                                    <i class="bi bi-pencil" style="font-size: 2rem; color: orange;"></i>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Voucher dịch vụ chăm sóc da mặt công nghệ
+                                                            mới
+                                                        </h5>
+                                                        <p class="card-text text-muted">05/07/19 - 31/08/19</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                                    <a href="#"
+                                                        style="text-decoration: none; color:black; margin-right:-100px;">Chi
+                                                        tiết ></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="card mb-3" style="border-radius: 0px; margin-top: -20px;">
+                                            <div class="row g-0 d-flex align-items-center justify-content-center">
+                                                <div class="col-2 d-flex align-items-center justify-content-center"
+                                                    style="width:60px; height:60px; border:orange solid 2px; border-radius:100px; margin-left:-35px;">
+                                                    <i class="bi bi-pencil" style="font-size: 2rem; color: orange;"></i>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Voucher dịch vụ chăm sóc da mặt công nghệ
+                                                            mới
+                                                        </h5>
+                                                        <p class="card-text text-muted">05/07/19 - 31/08/19 </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                                    <a href="#"
+                                                        style="text-decoration: none; color:black; margin-right:-100px;">Chi
+                                                        tiết ></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="card mb-3" style="border-radius: 0px; margin-top: -20px;">
+                                            <div class="row g-0 d-flex align-items-center justify-content-center">
+                                                <div class="col-2 d-flex align-items-center justify-content-center"
+                                                    style="width:60px; height:60px; border:orange solid 2px; border-radius:100px; margin-left:-35px;">
+                                                    <i class="bi bi-pencil" style="font-size: 2rem; color: orange;"></i>
+                                                </div>
+                                                <div class="col-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Voucher dịch vụ chăm sóc da mặt công nghệ
+                                                            mới
+                                                        </h5>
+                                                        <p class="card-text text-muted">05/07/19 - 31/08/19</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                                    <a href="#"
+                                                        style="text-decoration: none; color:black;margin-right:-100px;">Chi
+                                                        tiết ></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 4 -->
+                                        <div class="card mb-3"
+                                            style="border-radius: 0px; margin-top: -20px; height:184px">
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="coupon" role="tabpanel">
+                                        <div class="tab-pane fade show active" id="voucher" role="tabpanel"
+                                            style="  width:840px; ">
+                                            <!-- 1 -->
+                                            <div class="card mb-3"
+                                                style="border-radius: 0px; padding-top:10px; padding-bottom:10px;">
+                                                <div class="row g-0 d-flex align-items-center justify-content-center">
+                                                    <div class="col-2 d-flex align-items-center justify-content-center"
+                                                        style="width:60px; height:60px; border:orange solid 2px; border-radius:100px; margin-left:-35px;">
+                                                        <img src="/Week_1/resource/image/icon/icon/home-icon-2.png"
+                                                            alt="" style="width:30px;">
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Coupon giảm 50% dịch vụ da mặt công
+                                                                nghệ mới
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 d-flex align-items-center justify-content-center">
+                                                        <a href="#"
+                                                            style="text-decoration: none; color:black; margin-right:-100px;">Chi
+                                                            tiết ></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="tab-pane fade show active" id="voucher" role="tabpanel"
+                                                style="margin-top:-17px;  width:840px;">
+                                                <div class="card mb-3"
+                                                    style="border-radius: 0px; padding-top:10px; padding-bottom:10px;">
+                                                    <div
+                                                        class="row g-0 d-flex align-items-center justify-content-center">
+                                                        <div class="col-2 d-flex align-items-center justify-content-center"
+                                                            style="width:60px; height:60px; border:orange solid 2px; border-radius:100px; margin-left:-35px;">
+                                                            <img src="/Week_1/resource/image/icon/icon/home-icon-2.png"
+                                                                alt="" style="width:30px;">
+                                                        </div>
+                                                        <div class="col-8">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Coupon giảm 50% dịch vụ da mặt
+                                                                    công nghệ
+                                                                    mới
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-2 d-flex align-items-center justify-content-center">
+                                                            <a href="#"
+                                                                style="text-decoration: none; color:black; margin-right:-100px;">Chi
+                                                                tiết ></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-3"
+                                                style="border-radius: 0px; margin-top: -20px; height:184px">
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade d-flex align-items-center justify-content-center"
+                                        id="points" role="tabpanel" style="width:840px;  position:relative">
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="position:absolute;top:0px; border: rgb(208, 192, 192) solid 1px; width:100%; height:435px; background-color:white; ">
+                                            <div class="d-flex justify-content-center align-items-center"
+                                                style="flex-direction: column">
+                                                <p style="font-size:20px;">Số điểm của bạn</p>
+                                                <span class="d-flex justify-content-center align-items-center"
+                                                    style="width:170px;  height:170px; border-radius: 50%; border:orange solid 15px; box-shadow: inset 0 0 15px orange;">
+                                                    <div class="d-flex justify-content-center align-items-center;"
+                                                        style="flex-direction: column">
+                                                        <h2>2456</h2>
+                                                        <h4 style="color:orange"> ĐIỂM</h4>
+                                                    </div>
+                                                </span>
+                                                <div style="margin-top:20px;">
+                                                    <a class="btn" href=""
+                                                        style="border:none; border-radius: 20px; background-color:rgb(230, 222, 222); height:40px;"><b>TRAO
+                                                            ĐỔI</b></a>
+                                                    <a class="btn" href=""
+                                                        style="border:none; border-radius: 20px; background-color:rgb(230, 222, 222); height:40px;"><b>CHO
+                                                            TẶNG</b></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row" style="background-color: rgb(247, 247, 244);height:60px;"> </div> -->
+                    </div>
+                </div>
+                <div id="history" class="content-section">
+                    <div
+                        style=" border-radius: 4px; background-color:white; height:65%; width:90%; border:none; box-shadow: 0 0 1px black; margin-top:-30px">
+                        <div class="newPassword ">
+                            <div>
+                                <p style=" font-size: 20px;  padding-top:15px;"><b>Lịch sử giao dịch</b>
+                                </p>
+                            </div>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ngày</th>
+                                        <th>Nội dung</th>
+                                        <th>Số tiền</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>24/7/1019</td>
+                                        <td>Mua dịch vụ chăm sóc da công nghệ mới</td>
+                                        <td style="color: orange">-300.000</td>
+                                        <td>Hoàn tất</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24/7/1019</td>
+                                        <td>Mua dịch vụ chăm sóc da công nghệ mới</td>
+                                        <td style="color: orange">-300.000</td>
+                                        <td>Hoàn tất</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- </main> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Ẩn tất cả các nội dung
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Hiển thị nội dung tương ứng
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+        }
+
+        // Mặc định hiển thị dashboard khi tải trang
+        document.addEventListener('DOMContentLoaded', function () {
+            showContent('dashboard');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+</html>
