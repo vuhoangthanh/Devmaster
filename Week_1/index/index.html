@@ -30,6 +30,12 @@
             display: none;
             /* width: 450px; */
         }
+
+        .info-banner {
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -126,9 +132,15 @@
 
     </div>
 
-    <hr style=" height: 5px; border:none; background-color: rgb(243, 169, 31); margin-top: 0px;margin-bottom: 0px;">
+    <hr style=" height: 5px; border:none; background-color: rgb(171, 129, 49); margin-top: 0px;margin-bottom: 0px;">
     <!-- Carousel Banner -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button style="" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/Week_1/resource/image/icon/banner-slider.jpg" alt="Banner 1">
@@ -153,31 +165,40 @@
     <!-- list function -->
     <div class="container-fluid">
         <div class="row mt-5">
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-1.png" alt="">
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-1.png" alt="">
                 <p>HOÀN TIỀN TỚI <br>15% VÀO VÍ
                 </p>
-            </div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-2.png" alt="">50+
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-2.png" alt="">50+
                 ƯU ĐÃI <br> MỖI THÁNG
-            </div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-3.png" alt="">ĐẶT
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-3.png" alt="">ĐẶT
                 DỊCH VỤ <br> NHANH CHÓNG
-            </div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-4.png" alt="">HƠN
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-4.png" alt="">HƠN
                 22 <br> THƯƠNG HIỆU
-            </div>
+            </span>
         </div>
         <div class="row mt-5">
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-5.png" alt="">HƠN
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-5.png" alt="">HƠN
                 300+ <br> SPA LÀM ĐẸP
-            </div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-6.png" alt="">HƠN
-                250+ <br> ĐỐI TÁC</div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-7.png" alt="">HƠN
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-6.png" alt="">HƠN
+                250+ <br> ĐỐI TÁC
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-7.png" alt="">HƠN
                 1250+ <br> KHÁCH HÀNG
-            </div>
-            <div class="col-3"><img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-8.png" alt="">HƠN
-                25 <br> THÀNH PHỐ</div>
+            </span>
+            <span class="info-banner col-3"><img class="icon-list"
+                    src="/Week_1/resource/image/icon/icon/home-icon-8.png" alt="">HƠN
+                25 <br> THÀNH PHỐ</span>
         </div>
     </div>
 
@@ -387,8 +408,15 @@
             <div class="row d-flex justify-content-center align-items-center mt-5">
                 <div class="col-2">
                     <button
-                        style="width:235px; height:47px; background-color:#ff6600; margin-top:-10px; margin-bottom: 50px; border-radius: 25px; border:none; color:white">XEM
-                        THÊM</button>
+                        style="width:235px; height:47px; background-color:#ff6600; margin-top:-10px; margin-bottom: 50px; border-radius: 25px; border:none; color:white">
+                        XEM THÊM
+                        <svg style="width: 20px; margin:-3px 0 0 3px;" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" />
+                        </svg>
+                        <!-- <i class="fas fa-caret-down" style="color: white; font-size: 16px;"></i> -->
+                    </button>
                 </div>
             </div>
         </div>
@@ -406,7 +434,6 @@
     </script>
 </body>
 
-<!-- Thêm liên kết tới JavaScript Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 

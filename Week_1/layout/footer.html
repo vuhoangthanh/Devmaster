@@ -4,18 +4,28 @@
 <style>
     .p_info,
     .b_info {
-        color: white;
+        color: rgb(175, 172, 172);
+    }
+
+    .input_footer {
+        width: 225px;
+        height: 30px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        background-color: #726864;
+        outline: none;
+        text-indent: 3px;
     }
 
     .input_footer::placeholder {
-        color: white;
+        color: rgb(175, 172, 172);
         font-size: 15px;
 
     }
 </style>
 <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center "
-        style="height:110px;     box-shadow: 0 -4px 10px  rgba(0, 0, 0, 0.2)">
+        style="height:110px; box-shadow: 0 -4px 10px  rgba(0, 0, 0, 0.2); padding: 0 9%;">
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-1.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-2.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-3.png" alt=""></div>
@@ -23,7 +33,7 @@
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-5.png" alt=""></div>
         <div class="col-2"><img src="/Week_1/resource/image/icon/partner-6.png" alt=""></div>
     </div>
-    <div class="row" style="background-color:rgb(51, 48, 51)">
+    <div class="row" style="background-color:rgb(51, 48, 51); padding: 0 11%; padding-bottom: 20px;">
         <div class="col-3 d-flex flex-column justify-content-center align-items-start" style="padding-left:20px;">
             <hr style="width: 70px; height: 2px; border:none; background-color: #ff6600;  margin-top:50px;">
             <b class="b_info" style="font-size:30px">Liên hệ</b>
@@ -57,8 +67,7 @@
             <b class="b_info" style="font-size:30px">NEWLETTER</b>
             <p class="p_info">Đăng ký để nhận ưu đãi hàng tháng</p>
             <div class="d-flex justify-content-center align-items-center">
-                <input type="text" placeholder=" Nhập email" class="input_footer"
-                    style="width:225px; height:30px; border-radius:5px 0 0 5px; border:none; background-color:#726864;  ">
+                <input type="text" placeholder=" Nhập email" class="input_footer">
                 <div class="d-flex justify-content-center align-items-center only-left-border"
                     style="background-color:#726864; width:34px;height:30px; border-radius: 0 5px 5px 0; border-left: black solid 1px">
                     <img src="/Week_1/resource/image/icon/icon/send.png" alt="" style=" width:15px;height:12px; ">
