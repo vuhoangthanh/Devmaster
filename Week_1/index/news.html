@@ -8,7 +8,13 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="/Week_1/resource/css/news.css">
 
-
+    <style>
+        #popup {
+            width: 150px;
+            background-color: white;
+            box-shadow: 0 0 5px rgb(167, 163, 163);
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +43,7 @@
             .catch(error => console.error('Error loading headerUser:', error));
     </script>
 
-    <div id="popup" style="width:150px; background-color: white; box-shadow: 0 0 5px rgb(167, 163, 163);">
+    <div id="popup">
         <span id="triangle"></span>
         <a class="btn" href="">
             Tài khoản của tôi

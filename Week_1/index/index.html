@@ -31,10 +31,44 @@
             /* width: 450px; */
         }
 
+        .line-top {
+            height: 5px;
+            border: none;
+            background-color: rgb(171, 129, 49);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
         .info-banner {
             /* text-align: center; */
             display: flex;
+            justify-content: center;
             align-items: center;
+
+        }
+
+        .info-banner p {
+            margin-top: 17px;
+        }
+
+        .line-up {
+            width: 70px;
+            height: 2px;
+            border: none;
+            background-color: #ff6600;
+            margin-left: 150px;
+            margin-top: 0px;
+        }
+
+        .btn-see-more {
+            width: 235px;
+            height: 47px;
+            background-color: #ff6600;
+            margin-top: -10px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            border: none;
+            color: white
         }
     </style>
 </head>
@@ -109,7 +143,6 @@
         fetch('/Week_1/auth/register.html')
             .then(response => response.text())
             .then(data => {
-                // Chèn nội dung vào placeholder
                 document.getElementById('popup1').innerHTML = data;
 
                 const exit = document.getElementById('exit1');
@@ -126,18 +159,16 @@
     </script>
     <div id="overlay" style="display: none;"></div>
     <div class="container" id="popup" style="width:450px; background-color: transparent;">
-
     </div>
     <div class="container" id="popup1" style="width:450px; background-color: transparent;">
-
     </div>
 
-    <hr style=" height: 5px; border:none; background-color: rgb(171, 129, 49); margin-top: 0px;margin-bottom: 0px;">
+    <hr class="line-top">
     <!-- Carousel Banner -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-indicators">
-            <button style="" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
-                class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
         </div>
@@ -165,48 +196,47 @@
     <!-- list function -->
     <div class="container-fluid">
         <div class="row mt-5">
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-1.png" alt="">
-                <p>HOÀN TIỀN TỚI <br>15% VÀO VÍ
-                </p>
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-1.png" alt="">
+                <p>HOÀN TIỀN TỚI <br>15% VÀO VÍ</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-2.png" alt="">50+
-                ƯU ĐÃI <br> MỖI THÁNG
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-2.png" alt="">
+                <p>50+ ƯU ĐÃI <br> MỖI THÁNG</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-3.png" alt="">ĐẶT
-                DỊCH VỤ <br> NHANH CHÓNG
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-3.png" alt="">
+                <p>ĐẶT DỊCH VỤ <br> NHANH CHÓNG</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-4.png" alt="">HƠN
-                22 <br> THƯƠNG HIỆU
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-4.png" alt="">
+                <p>HƠN 22 <br> THƯƠNG HIỆU</p>
             </span>
         </div>
         <div class="row mt-5">
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-5.png" alt="">HƠN
-                300+ <br> SPA LÀM ĐẸP
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-5.png" alt="">
+                <p>HƠN 300+ <br> SPA LÀM ĐẸP</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-6.png" alt="">HƠN
-                250+ <br> ĐỐI TÁC
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-6.png" alt="">
+                <p>HƠN 250+ <br> ĐỐI TÁC</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-7.png" alt="">HƠN
-                1250+ <br> KHÁCH HÀNG
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-7.png" alt="">
+                <p>HƠN 1250+ <br> KHÁCH HÀNG</p>
             </span>
-            <span class="info-banner col-3"><img class="icon-list"
-                    src="/Week_1/resource/image/icon/icon/home-icon-8.png" alt="">HƠN
-                25 <br> THÀNH PHỐ</span>
+            <span class="info-banner col-3">
+                <img class="icon-list" src="/Week_1/resource/image/icon/icon/home-icon-8.png" alt="">
+                <p>HƠN 25 <br> THÀNH PHỐ</p>
+            </span>
         </div>
     </div>
 
 
     <!-- top -->
     <div class="section">
-        <hr
-            style="width: 70px; height: 2px; border:none; background-color: #ff6600; margin-left:150px; margin-top:-10px;">
+        <hr class="line-up">
         <h2 class="section-title">Ưu Đãi Hot</h2>
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -266,8 +296,10 @@
                                 <div class="card-body">
                                     <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
                                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                                        <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
-                                            31/01/19</p>
+                                        <p class="date">
+                                            <i class="bi bi-calendar" style="color: #ff6600"> </i> 05/11/19 -
+                                            31/01/19
+                                        </p>
                                         <a href="#" class="btn">Xem Chi Tiết ></a>
                                     </div>
                                 </div>
@@ -280,8 +312,10 @@
                                 <div class="card-body">
                                     <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
                                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                                        <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
-                                            31/01/19</p>
+                                        <p class="date">
+                                            <i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                            31/01/19
+                                        </p>
                                         <a href="#" class="btn">Xem Chi Tiết ></a>
                                     </div>
                                 </div>
@@ -294,8 +328,10 @@
                                 <div class="card-body">
                                     <h3>Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h3>
                                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                                        <p class="date"><i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
-                                            31/01/19</p>
+                                        <p class="date">
+                                            <i class="bi bi-calendar" style="color: #ff6600"></i> 05/11/19 -
+                                            31/01/19
+                                        </p>
                                         <a href="#" class="btn">Xem Chi Tiết ></a>
                                     </div>
                                 </div>
@@ -321,8 +357,7 @@
 
     <div class="container-fluid">
         <!-- chọn theo thương hiệu -->
-        <hr
-            style="width: 70px; height: 2px; border:none; background-color: #ff6600; margin-left:150px; margin-top:60px;">
+        <hr class="line-up" style="margin-top:40px;">
         <h2 class="section-title">Chọn theo thương hiệu</h2>
         <div class="row">
             <div class="col-4">
@@ -407,11 +442,10 @@
             </div>
             <div class="row d-flex justify-content-center align-items-center mt-5">
                 <div class="col-2">
-                    <button
-                        style="width:235px; height:47px; background-color:#ff6600; margin-top:-10px; margin-bottom: 50px; border-radius: 25px; border:none; color:white">
+                    <button class="btn-see-more">
                         XEM THÊM
                         <svg style="width: 20px; margin:-3px 0 0 3px;" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            viewBox="0 0 320 512">
                             <path fill="#ffffff"
                                 d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" />
                         </svg>

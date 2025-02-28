@@ -118,11 +118,13 @@
 
 
 #popup {
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 0 5px rgb(167, 163, 163);
     position: absolute;
     top: 16%;
     left: 87.5%;
     transform: translate(-50%, -50%);
-    background: aqua;
     z-index: 100;
     border: none;
     border-radius: 5px;
